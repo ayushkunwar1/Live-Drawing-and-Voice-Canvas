@@ -8,7 +8,13 @@
     }
   },
   "rewrites": [
-    { "source": "/api/socket-io/:path*", "destination": "/api/socket-io" },
-    { "source": "/((?!api/socket-io).*)", "destination": "/index.html" }
+    {
+      "source": "/api/socket-io/:path*",
+      "destination": "/api/socket-io"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
   ]
 }
