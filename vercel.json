@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "client/dist",
+  "functions": {
+    "api/socket-io.js": {
+      "maxDuration": 300
+    }
+  },
+  "rewrites": [
+    { "source": "/api/socket-io/:path*", "destination": "/api/socket-io" },
+    { "source": "/((?!api/socket-io).*)", "destination": "/index.html" }
+  ]
+}
