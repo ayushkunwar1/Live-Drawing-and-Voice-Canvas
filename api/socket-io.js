@@ -11,7 +11,7 @@ const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   path: '/api/socket-io/socket.io',
   cors: { origin: true, credentials: true },
-  transports: ['polling', 'websocket'],
+  transports: ['websocket'],
 });
 
 const rooms = new Map();
