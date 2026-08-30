@@ -39,7 +39,7 @@ export function useRoomSocket(roomId, name) {
       {
         autoConnect: false,
 
-        path: SOCKET_PATH,
+        path: '/api/socket-io/socket.io',
 
       
         transports: [
