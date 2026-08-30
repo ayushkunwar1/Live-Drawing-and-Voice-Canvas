@@ -95,27 +95,5 @@ The current canvas can be exported as:
 - Vercel
 - GitHub
 
----
 
-## 🏗️ System Architecture
 
-```text
-                    ┌─────────────────────┐
-                    │      Vercel         │
-                    │                     │
-                    │   React Frontend    │
-                    │         │           │
-                    │         │ WebSocket │
-                    │         ▼           │
-                    │   WebSocket API     │
-                    │      /api/ws        │
-                    └─────────┬───────────┘
-                              │
-                 ┌────────────┼────────────┐
-                 │            │            │
-                 ▼            ▼            ▼
-              Room Data    Canvas       WebRTC
-              & Users      Events       Signaling
-                                            │
-                                            ▼
-                                    Peer-to-Peer Audio
