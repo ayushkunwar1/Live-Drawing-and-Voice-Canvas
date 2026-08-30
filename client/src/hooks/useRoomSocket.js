@@ -41,15 +41,8 @@ export function useRoomSocket(roomId, name) {
 
         path: SOCKET_PATH,
 
-        /*
-         * IMPORTANT:
-         * Start with polling + websocket.
-         *
-         * This makes debugging easier and allows
-         * Socket.IO to perform its normal handshake.
-         */
+      
         transports: [
-          'polling',
           'websocket'
         ],
 
